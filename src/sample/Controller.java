@@ -51,6 +51,7 @@ public class Controller  implements Initializable  {
                 System.out.println("basic");
                 setScene("BasicUserFX.fxml" , e);
             }else {
+
                setScene("AdminFX.fxml" , e);
             }
 

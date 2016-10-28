@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 /**
  * Created by user on 10/27/16.
  */
-public class BasicUser implements Initializable {
+public class BasicUser implements Initializable,IController {
 
     @FXML
     ProgressBar bar;
@@ -38,6 +38,7 @@ public class BasicUser implements Initializable {
     }
 
     @FXML
+    @Override
     public void ButtonClickUp(ActionEvent actionEvent) {
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < LocalDB.entries.size() ; i++) {
@@ -46,10 +47,12 @@ public class BasicUser implements Initializable {
         }
            ObservableList<String> options = new ObservableListWrapper<String>(list);
            comboServer.setItems(options);
+           comboServer.setVisibleRowCount(3);
 
     }
 
     @FXML
+    @Override
     public void ButtonClickDownload(ActionEvent actionEvent) {
         String item = comboServer.getValue();
 
@@ -72,16 +75,18 @@ public class BasicUser implements Initializable {
 
 
     @FXML
+    @Override
     public void ButtonClickUpdateDownloads(ActionEvent actionEvent) {
        // String item = downloadsCombo.getValue();
         ArrayList<String> downloads = new DirectorySearch().searchForFiles();
         ObservableList<String> options1 = new ObservableListWrapper<String>(downloads);
         downloadsCombo.setItems(options1);
+        downloadsCombo.setVisibleRowCount(3);
 
     }
 
-
-    private void startProgressbar(){
+    @Override
+    public void startProgressbar(){
         Thread t1 = new Thread() {
             @Override
             public void run() {

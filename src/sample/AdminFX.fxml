@@ -1,8 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Admin"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Admin">
+    <children>
+        <ComboBox id="comb" fx:id="comboServer" layoutX="154.0" layoutY="70.0" prefHeight="25.0" prefWidth="281.0" />
+        <Label layoutX="225.0" layoutY="31.0" prefHeight="24.0" prefWidth="237.0" text="Files in the Server" textFill="#338a39">
+            <font>
+                <Font size="19.0" />
+            </font></Label>
+        <Button fx:id="updateButton" layoutX="27.0" layoutY="70.0" mnemonicParsing="false" onAction="#ButtonClickUp" prefHeight="25.0" prefWidth="108.0" text="Get Files" />
+        <Label fx:id="message" layoutX="27.0" layoutY="174.0" prefHeight="15.0" prefWidth="514.0" textFill="RED" />
+        <ProgressBar fx:id="bar" layoutX="200.0" layoutY="343.0" prefWidth="200.0" progress="0.0" />
+        <Button fx:id="downloadButton" layoutX="452.0" layoutY="70.0" mnemonicParsing="false" onAction="#ButtonClickDownload" prefHeight="25.0" prefWidth="126.0" text="Download" />
+        <ComboBox fx:id="downloadsCombo" layoutX="154.0" layoutY="215.0" prefHeight="25.0" prefWidth="281.0" />
+        <Label layoutX="248.0" layoutY="188.0" text="Downloads" textFill="#192694">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Button fx:id="updateDownloads" layoutX="27.0" layoutY="215.0" mnemonicParsing="false" onAction="#ButtonClickUpdateDownloads" prefHeight="25.0" prefWidth="108.0" text="update" />
+      <Button layoutX="452.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonClickDelete" prefHeight="25.0" prefWidth="126.0" text="Delete" />
+      <Label fx:id="messageErr" layoutX="171.0" layoutY="124.0" prefHeight="15.0" prefWidth="237.0" text="Label" textFill="RED" />
+      <Button fx:id="commitID" layoutX="452.0" layoutY="215.0" mnemonicParsing="false" onAction="#buttonClickCommit" text="commitToServer" />
+    </children>
+</AnchorPane>
