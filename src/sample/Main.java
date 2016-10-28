@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("File Client");
         primaryStage.setScene(new Scene(root, 500, 500));
         primaryStage.show();
+        primaryStage.setResizable(false);
         //ClientImplementor implementor = new ClientImplementor(6666);
         //ClientCommunicator communicator = new ClientCommunicator(implementor.getOut(), implementor.getIn());
 

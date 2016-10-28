@@ -64,10 +64,11 @@ public class Controller  implements Initializable  {
     private void setScene(String fxmlScene ,ActionEvent event){
         try {
             Parent homeP = FXMLLoader.load(getClass().getResource(fxmlScene));
-            Scene home = new Scene(homeP,500, 500);
+            Scene home = new Scene(homeP,700, 700);
             Stage appStage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
              appStage.setScene(home);
               appStage.show();
+
         } catch (IOException e1) {
             e1.printStackTrace();
         }
