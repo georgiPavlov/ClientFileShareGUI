@@ -10,7 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
-
+import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import sample.SearchDir.DirectorySearch;
 import sample.SocketCommunication.GUIcommunicator;
@@ -30,6 +30,8 @@ public class BasicUser implements Initializable,IController {
     ComboBox<String>  comboServer;
     @FXML
     ComboBox<String>  downloadsCombo;
+    @FXML
+    Label messageErr;
 
 
     @Override
@@ -55,6 +57,10 @@ public class BasicUser implements Initializable,IController {
     @Override
     public void ButtonClickDownload(ActionEvent actionEvent) {
         String item = comboServer.getValue();
+        if(item.equals(null)){
+            messageErr.setText("please select file");
+            return;
+        }
 
         for (int i = 0; i < LocalDB.entries.size(); i++) {
             LocalDB.entries.get(i).getName().toString();
@@ -101,5 +107,8 @@ public class BasicUser implements Initializable,IController {
         };
         t1.start();
     }
+
+
+
 
 }

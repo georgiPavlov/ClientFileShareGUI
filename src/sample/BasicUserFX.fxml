@@ -27,5 +27,6 @@
          </font>
       </Label>
       <Button fx:id="updateDownloads" layoutX="27.0" layoutY="215.0" mnemonicParsing="false" onAction="#ButtonClickUpdateDownloads" prefHeight="25.0" prefWidth="108.0" text="update" />
+      <Label fx:id="messageErr" layoutX="164.0" layoutY="110.0" prefHeight="15.0" prefWidth="250.0" textFill="RED" />
    </children>
 </AnchorPane>
