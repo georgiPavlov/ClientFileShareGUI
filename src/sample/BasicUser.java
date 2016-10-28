@@ -67,6 +67,7 @@ public class BasicUser implements Initializable {
                         "/home/user/ClientFileShareGUI/downloads");
                 System.out.println("end");
                 startProgressbar();
+                bar.setProgress(0);
             }
         }
 
@@ -77,7 +78,8 @@ public class BasicUser implements Initializable {
             @Override
             public void run() {
                 double incrementor = 1 / LocalDB.progressBar;
-                while (LocalDB.progressBar != LocalDB.currentProgressBarValue){
+                while (LocalDB.progressBar != LocalDB.currentProgressBarValue + 1){
+                    System.out.println(LocalDB.progressBar + " progress");
                     System.out.println(LocalDB.currentProgressBarValue);
                     bar.setProgress(incrementor * LocalDB.currentProgressBarValue);
                 }

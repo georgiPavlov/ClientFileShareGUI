@@ -11,11 +11,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BasicUser">
    <children>
-      <ComboBox id="comb" fx:id="comboServer" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="420.0" />
-      <Label layoutX="20.0" layoutY="38.0" prefHeight="15.0" prefWidth="420.0" text="Files in the Server" textFill="#04ff18" />
-      <Button fx:id="updateButton" layoutX="485.0" layoutY="33.0" mnemonicParsing="false" onAction="#ButtonClickUp" text="Get Files" />
+      <ComboBox id="comb" fx:id="comboServer" layoutX="154.0" layoutY="70.0" prefHeight="25.0" prefWidth="281.0" />
+      <Label layoutX="225.0" layoutY="31.0" prefHeight="24.0" prefWidth="237.0" text="Files in the Server" textFill="#338a39">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Button fx:id="updateButton" layoutX="27.0" layoutY="70.0" mnemonicParsing="false" onAction="#ButtonClickUp" prefHeight="25.0" prefWidth="108.0" text="Get Files" />
       <Label fx:id="message" layoutX="27.0" layoutY="174.0" prefHeight="15.0" prefWidth="514.0" textFill="RED" />
       <ProgressBar fx:id="bar" layoutX="200.0" layoutY="343.0" prefWidth="200.0" progress="0.0" />
-      <Button fx:id="downloadButton" layoutX="485.0" layoutY="70.0" mnemonicParsing="false" onAction="#ButtonClickDownload" prefHeight="25.0" prefWidth="75.0" text="Button" />
+      <Button fx:id="downloadButton" layoutX="452.0" layoutY="70.0" mnemonicParsing="false" onAction="#ButtonClickDownload" prefHeight="25.0" prefWidth="108.0" text="Download" />
    </children>
 </AnchorPane>
