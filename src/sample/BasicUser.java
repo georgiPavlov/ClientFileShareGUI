@@ -12,6 +12,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 
 import javafx.event.ActionEvent;
+import sample.SearchDir.DirectorySearch;
 import sample.SocketCommunication.GUIcommunicator;
 
 import java.net.URL;
@@ -28,10 +29,7 @@ public class BasicUser implements Initializable {
     @FXML
     ComboBox<String>  comboServer;
     @FXML
-
-
-
-
+    ComboBox<String>  downloadsCombo;
 
 
     @Override
@@ -55,8 +53,6 @@ public class BasicUser implements Initializable {
     public void ButtonClickDownload(ActionEvent actionEvent) {
         String item = comboServer.getValue();
 
-
-
         for (int i = 0; i < LocalDB.entries.size(); i++) {
             LocalDB.entries.get(i).getName().toString();
             if(LocalDB.entries.get(i).getName().equals(item)){
@@ -72,6 +68,18 @@ public class BasicUser implements Initializable {
         }
 
     }
+
+
+
+    @FXML
+    public void ButtonClickUpdateDownloads(ActionEvent actionEvent) {
+       // String item = downloadsCombo.getValue();
+        ArrayList<String> downloads = new DirectorySearch().searchForFiles();
+        ObservableList<String> options1 = new ObservableListWrapper<String>(downloads);
+        downloadsCombo.setItems(options1);
+
+    }
+
 
     private void startProgressbar(){
         Thread t1 = new Thread() {
