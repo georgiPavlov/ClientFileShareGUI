@@ -1,4 +1,4 @@
-package sample.SocketCommunication;
+package com.GP.GUIFileShare.SocketCommunication;
 
 import com.GP.ClientImplementator.ClientCommunicator;
 import com.GP.ClientImplementator.ClientImplementor;

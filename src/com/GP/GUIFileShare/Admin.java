@@ -1,14 +1,10 @@
-package sample;
+package com.GP.GUIFileShare;
 
 import com.GP.LocalDB_implementator.FileEntry;
 import com.GP.LocalDB_implementator.LocalDB;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import sample.SocketCommunication.GUIcommunicator;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+import com.GP.GUIFileShare.SocketCommunication.GUIcommunicator;
 
 /**
  * Created by user on 10/27/16.

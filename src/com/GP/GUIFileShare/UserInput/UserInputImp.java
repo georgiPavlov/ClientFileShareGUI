@@ -1,4 +1,4 @@
-package sample.UserInput;
+package com.GP.GUIFileShare.UserInput;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

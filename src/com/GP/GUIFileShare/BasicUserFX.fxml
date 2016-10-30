@@ -9,7 +9,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BasicUser">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.GP.GUIFileShare.BasicUser">
    <children>
       <ComboBox id="comb" fx:id="comboServer" layoutX="154.0" layoutY="70.0" prefHeight="25.0" prefWidth="281.0" />
       <Label layoutX="225.0" layoutY="31.0" prefHeight="24.0" prefWidth="237.0" text="Files in the Server" textFill="#338a39">

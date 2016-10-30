@@ -1,4 +1,4 @@
-package sample;
+package com.GP.GUIFileShare;
 
 import com.GP.LocalDB_implementator.FileEntry;
 import com.GP.LocalDB_implementator.LocalDB;
@@ -7,13 +7,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
-import sample.SearchDir.DirectorySearch;
-import sample.SocketCommunication.GUIcommunicator;
+import com.GP.GUIFileShare.SearchDir.DirectorySearch;
+import com.GP.GUIFileShare.SocketCommunication.GUIcommunicator;
 
 import java.net.URL;
 import java.util.ArrayList;

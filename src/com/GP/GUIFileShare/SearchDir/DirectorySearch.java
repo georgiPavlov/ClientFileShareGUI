@@ -1,4 +1,4 @@
-package sample.SearchDir;
+package com.GP.GUIFileShare.SearchDir;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -1,7 +1,6 @@
-package sample;
+package com.GP.GUIFileShare;
 ;
-import com.GP.ClientImplementator.ClientCommunicator;
-import com.GP.ClientImplementator.ClientImplementor;
+import com.GP.GUIFileShare.SocketCommunication.GUIcommunicator;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.SocketCommunication.GUIcommunicator;
 
 public class Main extends Application {
     static Stage rootStage;
@@ -17,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         GUIcommunicator com = new GUIcommunicator();
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
         primaryStage.setTitle("File Client");
         primaryStage.setScene(new Scene(root, 500, 500));
         primaryStage.show();

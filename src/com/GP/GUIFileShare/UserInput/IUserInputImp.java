@@ -1,4 +1,4 @@
-package sample.UserInput;
+package com.GP.GUIFileShare.UserInput;
 
 /**
  * Created by user on 10/29/16.

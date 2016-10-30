@@ -1,4 +1,4 @@
-package sample;
+package com.GP.GUIFileShare;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

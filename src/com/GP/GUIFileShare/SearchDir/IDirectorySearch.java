@@ -1,4 +1,4 @@
-package sample.SearchDir;
+package com.GP.GUIFileShare.SearchDir;
 
 import java.util.ArrayList;
 
