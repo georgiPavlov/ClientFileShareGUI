@@ -19,12 +19,16 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.net.URL;
 import javafx.event.ActionEvent;
+import sample.UserInput.IUserInputImp;
+import sample.UserInput.UserInputImp;
+
 import java.util.ResourceBundle;
 
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 public class Controller  implements Initializable  {
 
+      private  IUserInputImp pattern ;
       @FXML
       TextField userName;
       @FXML
@@ -33,6 +37,10 @@ public class Controller  implements Initializable  {
       Button signIn;
       @FXML
       Label  messageID;
+
+    public Controller(){
+        pattern = new UserInputImp();
+    }
 
 
     @Override
@@ -44,7 +52,11 @@ public class Controller  implements Initializable  {
     public void sighIn(ActionEvent e) {
         String user= userName.getText();
         String password_t  = password.getText();
-        //pattern_Matcher(user , password_t);
+        boolean isTrueUser = pattern.validateUsername(user);
+       boolean isTruePass = pattern.validatePassword(password_t);
+        if((!isTruePass) || (!isTrueUser)){
+            problemMessage("There is a problem with username or password");
+        }
         boolean isLoginOK = GUIcommunicator.communicator.loginAuthentication(user , password_t);
         if(isLoginOK){
             if(!LocalDB.isAdmin){
@@ -56,7 +68,7 @@ public class Controller  implements Initializable  {
             }
 
         }else {
-            messageID.setText("There is a problem with login");
+            problemMessage("There is a problem with login");
 
         }
 
@@ -76,8 +88,10 @@ public class Controller  implements Initializable  {
 
     }
 
-
-    public void pattern_Matcher(String name , String password) {
-
+    private void problemMessage(String message){
+        messageID.setText(message);
     }
+
+
+
 }
