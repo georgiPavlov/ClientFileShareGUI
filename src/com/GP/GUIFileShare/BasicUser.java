@@ -92,8 +92,10 @@ public class BasicUser implements Initializable,IController {
     @Override
     public void startProgressbar(){
         Thread t1 = new Thread() {
+
             @Override
             public void run() {
+                while (LocalDB.progressBar == 0){}
                 double incrementor = 1 / LocalDB.progressBar;
                 while (LocalDB.progressBar != LocalDB.currentProgressBarValue + 1){
                     System.out.println(LocalDB.progressBar + " progress");

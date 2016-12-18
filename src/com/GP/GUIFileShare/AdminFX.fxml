@@ -28,7 +28,7 @@
         </Label>
         <Button fx:id="updateDownloads" layoutX="27.0" layoutY="215.0" mnemonicParsing="false" onAction="#ButtonClickUpdateDownloads" prefHeight="25.0" prefWidth="108.0" text="update" />
       <Button fx:id="deleteID" layoutX="452.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonClickDelete" prefHeight="25.0" prefWidth="126.0" text="Delete" />
-      <Label fx:id="messageErr" layoutX="171.0" layoutY="124.0" prefHeight="15.0" prefWidth="237.0" text="Label" textFill="RED" />
+      <Label fx:id="messageErr" layoutX="171.0" layoutY="124.0" prefHeight="15.0" prefWidth="237.0" textFill="RED" />
       <Button fx:id="commitID" layoutX="452.0" layoutY="215.0" mnemonicParsing="false" onAction="#buttonClickCommit" text="commitToServer" />
     </children>
 </AnchorPane>
